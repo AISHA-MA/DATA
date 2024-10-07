@@ -7,10 +7,10 @@ str_price_per_meter = input("what is the price of meter: \n")
 length = float(str_lenght)
 width =float(str_width)
 price =float(str_price_per_meter)
-#حساب عرض المساحة 
+# Calculate the area 
 print("The total area is : ")
 print (length*width)
-#حساب تكلفة الحائط 
+# Calculate the cost of the wall 
 print("The price of work : \n")
 Total_price = str(length*width*price)
 print("$ " + Total_price)
