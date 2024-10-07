@@ -1,0 +1,16 @@
+#This project is a simple Python program designed to calculate the total area of a wall and the cost of covering it based on the user's input.
+
+str_lenght = input("what is the wall lenght: \n")
+str_width = input("what is the wall width: \n")
+str_price_per_meter = input("what is the price of meter: \n")
+# convert type 
+length = float(str_lenght)
+width =float(str_width)
+price =float(str_price_per_meter)
+#حساب عرض المساحة 
+print("The total area is : ")
+print (length*width)
+#حساب تكلفة الحائط 
+print("The price of work : \n")
+Total_price = str(length*width*price)
+print("$ " + Total_price)
