@@ -1,0 +1,51 @@
+### Code: "Revenue Decline Simulator"
+
+This code simulates the revenue decline of a company over time, calculates the operating income each year, and determines the year when the company will start making a loss.
+
+#### Code Explanation:
+
+```python
+# Revenue and Expenses
+revenue = 1000000  # Initial revenue
+expense = 1000000  # Fixed expenses
+year = 0  # Year counter
+
+# Decrease revenue by 20% each year until operating income becomes negative
+while revenue > expense:
+    year += 1
+    revenue *= 0.8  # Decrease revenue by 20%
+    operating_income = revenue - expense  # Calculate operating income
+    print(f"Year {year}: Revenue = {revenue}, Operating Income = {operating_income}")
+
+print(f"The company will start making a loss after {year} years.")
+```
+
+#### Explanation of Each Part:
+
+1. **Initial Values**:
+   - `revenue = 1000000`: The starting revenue of the company is set to 1,000,000 dollars.
+   - `expense = 1000000`: Fixed expenses are also set to 1,000,000 dollars, meaning the operating expenses do not change.
+   - `year = 0`: Initializes a counter to keep track of the number of years.
+
+2. **While Loop**:
+   - The loop runs as long as the revenue is greater than the expenses.
+   - Each year, `revenue` is reduced by 20% (`revenue *= 0.8`), simulating a 20% annual revenue decline.
+
+3. **Operating Income Calculation**:
+   - Each year, `operating_income` is calculated by subtracting `expense` from `revenue`.
+   - This value is printed along with the year, displaying the revenue and operating income for that year.
+
+4. **Exit Condition**:
+   - When `revenue` decreases to a point where it’s less than `expense`, the loop stops.
+   - The program then prints the total number of years it took for the company to start making a loss.
+
+#### Example Output:
+
+Assuming an initial revenue of 1,000,000 and expenses of 1,000,000, the code would output something like:
+
+```
+Year 1: Revenue = 800000.0, Operating Income = -200000.0
+The company will start making a loss after 1 years.
+```
+
+This indicates that the company will start incurring a loss after 1 year if the revenue keeps decreasing at the same rate.
